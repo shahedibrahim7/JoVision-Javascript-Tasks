@@ -1,0 +1,18 @@
+﻿body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+p {
+    font-size: 2rem;
+}
+
+button {
+    font-size: 4rem;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
