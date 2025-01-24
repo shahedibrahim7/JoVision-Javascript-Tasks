@@ -1,0 +1,35 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <input id="name" type="text" placeholder="Name" />
+        <input id="age" type="text" placeholder="Age" />
+        <button onclick="op()"> Submit </button>
+    </form>
+    <script>
+        function op() {
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+
+            const user = { name: name, age: age, timestamp: new Date().toLocaleString() };
+            const { name: userName, age: userAge, timestamp: userTimestamp } = user;
+            alert('Your name is: ' + userName + '\nYour age is: ' + userAge + '\nTimestamp: ' + userTimestamp);
+
+        }
+    </script>
+</body>
+</html>
