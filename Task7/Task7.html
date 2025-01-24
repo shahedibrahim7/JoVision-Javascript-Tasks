@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+            font-size: 3em;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="demo">00:00:00</div>
+    <script>
+        setInterval(myTimer, 1000);
+
+        function myTimer() {
+            const date = new Date();
+            document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+        }
+    </script>
+</body>
+</html>
