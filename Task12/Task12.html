@@ -15,10 +15,8 @@
 </head>
 <body>
     <form>
-        <label> Name: </label>
-        <input id="name" type="text" />
-        <label> Age: </label>
-        <input id="age" type="text" />
+        <input id="name" type="text" placeholder="Name" />
+        <input id="age" type="text" placeholder="Age" />
         <button onclick="op()"> Submit </button>
     </form>
     <script>
@@ -28,7 +26,7 @@
 
             const user = { name: name, age: age, timestamp: new Date().toLocaleString() };
             const { name: userName, age: userAge, timestamp: userTimestamp } = user;
-            alert('Your name is: '+userName+'\nYour age is: '+userAge+'\nTimestamp: '+userTimestamp);
+            alert('Your name is: ' + userName + '\nYour age is: ' + userAge + '\nTimestamp: ' + userTimestamp);
 
         }
     </script>
