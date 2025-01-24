@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
+
+</head>
+<body>
+    <form>
+        <input id="name" type="text" placeholder="Name" />
+        <button type="button" onclick="op()"> Submit </button>
+    </form>
+    <script>
+        function op() {
+            const name = document.getElementById("name").value;
+            if (!name) { alert("Error: null value for name."); return; }
+
+            fetch("https://api.agify.io?name=" + name)
+                .then(res => res.json())
+                .then(data => {
+                    const userName = data.name;
+                    const userAge = data.age;
+                    alert("Your name is: " + userName + "\nYour age is: " + userAge);
+                })
+                .catch(error => {
+                    alert("Error: "+ error.message);
+                });
+        }
+    </script>
+</body>
+</html>
