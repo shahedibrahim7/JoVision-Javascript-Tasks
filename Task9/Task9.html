@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+        button{
+            font-size: larger;
+        }
+    </style>
+
+</head>
+<body>
+    <button onclick="op()">Get IP</button>
+    <script>
+        function op() {
+            fetch('https://api.ipify.org/')
+            .then(res => res.text())
+            .then(d => {console.log(d)
+            })
+        }
+    </script>
+</body>
+</html>
